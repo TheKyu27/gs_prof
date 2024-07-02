@@ -25,6 +25,10 @@ import imageio
 import numpy as np
 import time
 
+from torch.profiler import profile, record_function, ProfilerActivity
+ONE_ITERATION_DEBUG     = 0
+NVTX_PROFILING          = 1
+ONE_IMAGE_RENDER        = 1
 
 def render_set(model_path, load2gpu_on_the_fly, is_6dof, name, iteration, views, gaussians, pipeline, background, deform):
     render_path = os.path.join(model_path, name, "ours_{}".format(iteration), "renders")
@@ -43,8 +47,16 @@ def render_set(model_path, load2gpu_on_the_fly, is_6dof, name, iteration, views,
         fid = view.fid
         xyz = gaussians.get_xyz
         time_input = fid.unsqueeze(0).expand(xyz.shape[0], -1)
+        
+        # deform.step에 MLP연산 포함됨. 
+        if(NVTX_PROFILING): torch.cuda.nvtx.range_push("MLP")
         d_xyz, d_rotation, d_scaling = deform.step(xyz.detach(), time_input)
+        if(NVTX_PROFILING): torch.cuda.nvtx.range_pop()
+        
+        if(NVTX_PROFILING): torch.cuda.nvtx.range_push("RENDER")
         results = render(view, gaussians, pipeline, background, d_xyz, d_rotation, d_scaling, is_6dof)
+        if(NVTX_PROFILING): torch.cuda.nvtx.range_pop()
+        
         rendering = results["render"]
         depth = results["depth"]
         depth = depth / (depth.max() + 1e-5)
@@ -53,6 +65,7 @@ def render_set(model_path, load2gpu_on_the_fly, is_6dof, name, iteration, views,
         torchvision.utils.save_image(rendering, os.path.join(render_path, '{0:05d}'.format(idx) + ".png"))
         torchvision.utils.save_image(gt, os.path.join(gts_path, '{0:05d}'.format(idx) + ".png"))
         torchvision.utils.save_image(depth, os.path.join(depth_path, '{0:05d}'.format(idx) + ".png"))
+        if(ONE_IMAGE_RENDER): break
 
     for idx, view in enumerate(tqdm(views, desc="Rendering progress")):
         fid = view.fid
@@ -61,16 +74,25 @@ def render_set(model_path, load2gpu_on_the_fly, is_6dof, name, iteration, views,
 
         torch.cuda.synchronize()
         t_start = time.time()
-
+        
+        if(NVTX_PROFILING): torch.cuda.nvtx.range_push("MLP")
         d_xyz, d_rotation, d_scaling = deform.step(xyz.detach(), time_input)
+        if(NVTX_PROFILING): torch.cuda.nvtx.range_pop()
+
+        if(NVTX_PROFILING): torch.cuda.nvtx.range_push("RENDER")
         results = render(view, gaussians, pipeline, background, d_xyz, d_rotation, d_scaling, is_6dof)
+        if(NVTX_PROFILING): torch.cuda.nvtx.range_pop()
 
         torch.cuda.synchronize()
         t_end = time.time()
         t_list.append(t_end - t_start)
-
-    t = np.array(t_list[5:])
-    fps = 1.0 / t.mean()
+        if(ONE_IMAGE_RENDER): break
+    if(ONE_IMAGE_RENDER):
+        t = t_list[0]
+        fps = 1.0 / t
+    else:
+        t = np.array(t_list[5:])
+        fps = 1.0 / t.mean()
     print(f'Test FPS: \033[1;35m{fps:.5f}\033[0m, Num. of GS: {xyz.shape[0]}')
 
 
@@ -346,5 +368,20 @@ if __name__ == "__main__":
 
     # Initialize system state (RNG)
     safe_state(args.quiet)
+    ############################################################# Profiling Setup #############################################################
+    # with profile(
+    #     activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+    #     with_stack=True,
+    #     with_flops=True,
+    #     profile_memory=True
+    # ) as prof:
+    #     render_sets(model.extract(args), args.iteration, pipeline.extract(args), args.skip_train, args.skip_test, args.mode)
+    # with open("./profiling/train/profile_flops.txt", "w") as fout_flops:
+    #     print(prof.key_averages(group_by_stack_n=5).table(sort_by="flops"), file=fout_flops)
+    # with open("./profiling/train/profile_memory.txt", "w") as fout_mem:
+    #     print(prof.key_averages(group_by_stack_n=5).table(sort_by="self_cuda_memory_usage"), file=fout_mem)
+    # with open("./profiling/train/profile_CUDA.txt", "w") as fout_CUDA:
+    #     print(prof.key_averages(group_by_stack_n=5).table(sort_by="cuda_time_total"), file=fout_CUDA)
+    ###########################################################################################################################################
 
     render_sets(model.extract(args), args.iteration, pipeline.extract(args), args.skip_train, args.skip_test, args.mode)

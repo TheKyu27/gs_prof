@@ -23,6 +23,13 @@ from utils.image_utils import psnr
 from argparse import ArgumentParser, Namespace
 from arguments import ModelParams, PipelineParams, OptimizationParams
 
+from torch.profiler import profile, record_function, ProfilerActivity
+
+NVTX_PROFILER   = 0
+TORCH_PROFILER  = 0
+print("[NVTX_PROFILER]              : " + str(NVTX_PROFILER))
+print("[TORCH_PROFILER]             : " + str(TORCH_PROFILER))
+
 try:
     from torch.utils.tensorboard import SummaryWriter
 
@@ -74,10 +81,12 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations):
         # Every 1000 its we increase the levels of SH up to a maximum degree
         if iteration % 1000 == 0:
             gaussians.oneupSHdegree()
-
+        
+        if(NVTX_PROFILER): torch.cuda.nvtx.range_push("PICK_CAMERA")
         # Pick a random Camera
         if not viewpoint_stack:
             viewpoint_stack = scene.getTrainCameras().copy()
+        if(NVTX_PROFILER): torch.cuda.nvtx.range_pop()
 
         total_frame = len(viewpoint_stack)
         time_interval = 1 / total_frame
@@ -97,16 +106,23 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations):
             d_xyz, d_rotation, d_scaling = deform.step(gaussians.get_xyz.detach(), time_input + ast_noise)
 
         # Render
+        if(NVTX_PROFILER): torch.cuda.nvtx.range_push("Rendering")
         render_pkg_re = render(viewpoint_cam, gaussians, pipe, background, d_xyz, d_rotation, d_scaling, dataset.is_6dof)
         image, viewspace_point_tensor, visibility_filter, radii = render_pkg_re["render"], render_pkg_re[
             "viewspace_points"], render_pkg_re["visibility_filter"], render_pkg_re["radii"]
         # depth = render_pkg_re["depth"]
+        if(NVTX_PROFILER): torch.cuda.nvtx.range_pop()
 
         # Loss
+        if(NVTX_PROFILER): torch.cuda.nvtx.range_push("LOSS_COMP")
         gt_image = viewpoint_cam.original_image.cuda()
         Ll1 = l1_loss(image, gt_image)
         loss = (1.0 - opt.lambda_dssim) * Ll1 + opt.lambda_dssim * (1.0 - ssim(image, gt_image))
+        if(NVTX_PROFILER): torch.cuda.nvtx.range_pop()
+        
+        if(NVTX_PROFILER): torch.cuda.nvtx.range_push("BACK_PROP")
         loss.backward()
+        if(NVTX_PROFILER): torch.cuda.nvtx.range_pop()
 
         iter_end.record()
 
@@ -181,10 +197,13 @@ def prepare_output_and_logger(args):
 
     # Create Tensorboard writer
     tb_writer = None
-    if TENSORBOARD_FOUND:
-        tb_writer = SummaryWriter(args.model_path)
-    else:
-        print("Tensorboard not available: not logging progress")
+    ############################################################# tb writer Setup #############################################################
+    if TORCH_PROFILER:
+        if TENSORBOARD_FOUND:
+            tb_writer = SummaryWriter(args.model_path)
+        else:
+            print("Tensorboard not available: not logging progress")
+    ###########################################################################################################################################
     return tb_writer
 
 
@@ -272,7 +291,27 @@ if __name__ == "__main__":
     # Start GUI server, configure and run training
     # network_gui.init(args.ip, args.port)
     torch.autograd.set_detect_anomaly(args.detect_anomaly)
-    training(lp.extract(args), op.extract(args), pp.extract(args), args.test_iterations, args.save_iterations)
+    
+    ############################################################# Profiling Setup #############################################################
+    if TORCH_PROFILER:
+        with profile(
+            activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+            with_stack=True,
+            with_flops=True,
+            profile_memory=True
+        ) as prof:
+            training(lp.extract(args), op.extract(args), pp.extract(args), args.test_iterations, args.save_iterations) 
+        with open("./profiling/train/profile_flops.txt", "w") as fout_flops:
+            print(prof.key_averages(group_by_stack_n=5).table(sort_by="flops", row_limit=20), file=fout_flops)
+        with open("./profiling/train/profile_memory.txt", "w") as fout_mem:
+            print(prof.key_averages(group_by_stack_n=5).table(sort_by="self_cuda_memory_usage", row_limit=20), file=fout_mem)
+        with open("./profiling/train/profile_CUDA.txt", "w") as fout_CUDA:
+            print(prof.key_averages(group_by_stack_n=5).table(sort_by="cuda_time_total", row_limit=20), file=fout_CUDA)
+    ###########################################################################################################################################
+    else:
+        training(lp.extract(args), op.extract(args), pp.extract(args), args.test_iterations, args.save_iterations)
+        
+    
 
     # All done
     print("\nTraining complete.")

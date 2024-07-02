@@ -6,6 +6,7 @@ import os
 from utils.system_utils import searchForMaxIteration
 from utils.general_utils import get_expon_lr_func
 
+DEBUG_MODE          = 0
 
 class DeformModel:
     def __init__(self, is_blender=False, is_6dof=False):
@@ -14,6 +15,10 @@ class DeformModel:
         self.spatial_lr_scale = 5
 
     def step(self, xyz, time_emb):
+        if(DEBUG_MODE):
+            print("xyz shape        : " + str(xyz.shape))
+            print("time_emb         : " + str(time_emb.shape))
+            print(self.deform)
         return self.deform(xyz, time_emb)
 
     def train_setting(self, training_args):

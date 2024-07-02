@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from utils.rigid_utils import exp_se3
 
+DEBUG_MODE          = 0
 
 def get_embedder(multires, i=1):
     if i == -1:
@@ -107,6 +108,10 @@ class DeformNetwork(nn.Module):
             t_emb = self.timenet(t_emb)  # better for D-NeRF Dataset
         x_emb = self.embed_fn(x)
         h = torch.cat([x_emb, t_emb], dim=-1)
+        if(DEBUG_MODE): 
+            print("x_emb shape                  : " + str(x_emb.shape))
+            print("t_emb shape                  : " + str(t_emb.shape))
+            print("x,t concated emb shape       : " + str(h.shape))
         for i, l in enumerate(self.linear):
             h = self.linear[i](h)
             h = F.relu(h)

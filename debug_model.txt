@@ -1,0 +1,890 @@
+Looking for config file in output/jumping_jacks/cfg_args
+Config file found: output/jumping_jacks/cfg_args
+Rendering output/jumping_jacks
+Loading trained model at iteration 40000 [28/06 19:04:03]
+Found transforms_train.json file, assuming Blender data set! [28/06 19:04:03]
+Reading Training Transforms [28/06 19:04:03]
+Reading Test Transforms [28/06 19:04:14]
+Loading Training Cameras [28/06 19:04:16]
+Loading Test Cameras [28/06 19:04:20]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:20]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:20]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:20]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:20]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:20]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:20]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:20]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:20]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:20]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:20]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:20]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:20]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:20]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:20]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:20]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:21]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:21]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:21]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:21]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:21]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:21]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:21]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:21]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:21]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:21]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:21]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:21]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:21]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:21]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:21]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:21]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:21]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:21]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:21]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:21]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:21]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:21]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:21]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:21]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:22]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:22]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:22]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:22]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:22]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:22]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:22]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:22]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:22]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:22]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:22]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:22]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:22]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:22]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:22]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:22]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:22]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:22]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+xyz shape        : torch.Size([31489, 3]) [28/06 19:04:23]
+time_emb         : torch.Size([31489, 1]) [28/06 19:04:23]
+DeformNetwork(
+  (timenet): Sequential(
+    (0): Linear(in_features=13, out_features=256, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=256, out_features=30, bias=True)
+  )
+  (linear): ModuleList(
+    (0): Linear(in_features=93, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): Linear(in_features=256, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=256, bias=True)
+    (5): Linear(in_features=349, out_features=256, bias=True)
+    (6): Linear(in_features=256, out_features=256, bias=True)
+    (7): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (gaussian_warp): Linear(in_features=256, out_features=3, bias=True)
+  (gaussian_rotation): Linear(in_features=256, out_features=4, bias=True)
+  (gaussian_scaling): Linear(in_features=256, out_features=3, bias=True)
+) [28/06 19:04:23]
+Test FPS: [1;35m115.87414[0m, Num. of GS: 31489 [28/06 19:04:23]
