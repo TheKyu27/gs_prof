@@ -6,6 +6,12 @@ In our paper, we use:
 - real-world dataset from [NeRF-DS](https://jokeryan.github.io/projects/nerf-ds/) and [Hyper-NeRF](https://hypernerf.github.io/).
 - The dataset in the supplementary materials comes from [DeVRF](https://jia-wei-liu.github.io/DeVRF/).
 
+## NSight using NVTX Profiling
+- train_script.sh
+- render_script.sh
+  Download sqlite, nsys-rep, ncu-rep file and open locally using NVIDIA NSight or NVIDIA Compute Unit
+
+
 ## Dataset directory Hierarchy
 <img width="322" alt="image" src="https://github.com/TheKyu27/gs_prof/assets/80896996/6cf70584-f628-4cf1-a6e4-7979ab368cdb">
 
