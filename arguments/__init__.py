@@ -46,8 +46,7 @@ class ParamGroup:
                 setattr(group, arg[0], arg[1])
         return group
 
-
-class ModelParams(ParamGroup):
+class ModelParams(ParamGroup): 
     def __init__(self, parser, sentinel=False):
         self.sh_degree = 3
         self._source_path = ""
@@ -70,6 +69,7 @@ class ModelParams(ParamGroup):
 
 class PipelineParams(ParamGroup):
     def __init__(self, parser):
+        self.separate_sh = True
         self.convert_SHs_python = False
         self.compute_cov3D_python = False
         self.debug = False
@@ -78,7 +78,7 @@ class PipelineParams(ParamGroup):
 
 class OptimizationParams(ParamGroup):
     def __init__(self, parser):
-        self.iterations = 40_000
+        self.iterations = 30_000
         self.warm_up = 3_000
         self.position_lr_init = 0.00016
         self.position_lr_final = 0.0000016
@@ -86,8 +86,8 @@ class OptimizationParams(ParamGroup):
         self.position_lr_max_steps = 30_000
         self.deform_lr_max_steps = 40_000
         self.feature_lr = 0.0025
-        self.opacity_lr = 0.05
-        self.scaling_lr = 0.001
+        self.opacity_lr = 0.025
+        self.scaling_lr = 0.005
         self.rotation_lr = 0.001
         self.percent_dense = 0.01
         self.lambda_dssim = 0.2
@@ -95,11 +95,12 @@ class OptimizationParams(ParamGroup):
         self.opacity_reset_interval = 3000
         self.densify_from_iter = 500
         self.densify_until_iter = 15_000
-        self.densify_grad_threshold = 0.0007
+        self.densify_grad_threshold = 0.0002
+        self.random_background = False
+        self.optimizer_type = "default"
         super().__init__(parser, "Optimization Parameters")
 
-
-def get_combined_args(parser: ArgumentParser):
+def get_combined_args(parser : ArgumentParser):
     cmdlne_string = sys.argv[1:]
     cfgfile_string = "Namespace()"
     args_cmdline = parser.parse_args(cmdlne_string)
